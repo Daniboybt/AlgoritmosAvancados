@@ -19,6 +19,9 @@ def avaliaRodada(jogadores, cartasRodada):
 	for indice in range(len(perdedores), -1, -1):
 		jogadores.pop(indice)
 	
+	if(len(jogadores) == 1):
+		return jogadores
+		
 	return []
 	
 def jogo(jogadores, cartas):
@@ -54,9 +57,6 @@ def jogo(jogadores, cartas):
 		
 		if len(resultado) > 0:
 			return resultado
-		
-		if len(jogadores) == 1:
-			return jogadores
 		
 numJogadores = int(input())
 
